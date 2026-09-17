@@ -1,0 +1,1702 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="515.52pt" height="190.08pt" viewBox="0 0 515.52 190.08" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-17T21:12:28.636205</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 190.08 
+L 515.52 190.08 
+L 515.52 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 30.96 157.68 
+L 168.6 157.68 
+L 168.6 34.56 
+L 30.96 34.56 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 38.606667 157.68 
+L 38.606667 34.56 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m8329f0df69" d="M 0 0 
+L 0 2.5 
+" style="stroke: #536276; stroke-width: 0.65"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8329f0df69" x="38.606667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0.1 -->
+      <g style="fill: #536276" transform="translate(32.621667 167.523125) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-30" d="M 269 1958 
+C 269 378 1114 -51 1677 -51 
+C 2240 -51 3085 384 3085 1958 
+C 3085 3501 2266 3962 1677 3962 
+C 1094 3962 269 3507 269 1958 
+z
+M 806 2016 
+C 806 3174 1325 3482 1670 3482 
+C 2003 3482 2547 3200 2547 2016 
+C 2547 774 2022 429 1677 429 
+C 1325 429 806 768 806 2016 
+z
+" transform="scale(0.015625)"/>
+        <path id="CMUTypewriter-Bold-2e" d="M 1197 480 
+C 1197 205 1427 0 1677 0 
+C 1958 0 2150 237 2150 480 
+C 2150 755 1926 954 1677 954 
+C 1395 954 1197 723 1197 480 
+z
+" transform="scale(0.015625)"/>
+        <path id="CMUTypewriter-Bold-31" d="M 621 2944 
+C 621 2810 666 2701 858 2701 
+C 1005 2701 1248 2758 1498 2944 
+L 1498 480 
+L 902 480 
+C 698 480 653 346 653 237 
+C 653 122 717 6 870 0 
+L 2637 0 
+C 2848 0 2874 134 2874 243 
+C 2880 365 2822 480 2630 480 
+L 2035 480 
+L 2035 3712 
+C 2035 3827 2003 3962 1818 3962 
+C 1683 3962 1632 3878 1594 3789 
+C 1472 3533 1261 3270 966 3200 
+C 819 3168 621 3213 621 2944 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 69.193333 157.68 
+L 69.193333 34.56 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m8329f0df69" x="69.193333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 0.2 -->
+      <g style="fill: #536276" transform="translate(63.208333 167.523125) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-32" d="M 333 230 
+C 339 13 480 0 582 0 
+L 2771 0 
+C 3027 0 3021 179 3021 275 
+L 3021 538 
+C 3021 781 2874 787 2752 787 
+L 2739 787 
+C 2624 787 2483 774 2483 538 
+L 2483 480 
+L 1171 480 
+C 2310 1427 3021 1875 3021 2694 
+C 3021 3456 2387 3962 1594 3962 
+C 806 3962 333 3392 333 2906 
+C 333 2669 499 2611 602 2611 
+C 877 2611 870 2899 870 2912 
+C 890 3162 1082 3482 1491 3482 
+C 1946 3482 2483 3238 2483 2688 
+C 2483 2061 1933 1709 442 467 
+C 371 403 333 371 333 230 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 99.78 157.68 
+L 99.78 34.56 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m8329f0df69" x="99.78" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 0.3 -->
+      <g style="fill: #536276" transform="translate(93.795 167.523125) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-33" d="M 275 883 
+C 275 320 877 -51 1677 -51 
+C 2592 -51 3072 506 3072 1146 
+C 3072 1440 2944 1894 2381 2118 
+C 2842 2438 2886 2874 2886 3034 
+C 2886 3539 2477 3962 1683 3962 
+C 730 3962 467 3526 467 3232 
+C 467 3066 550 2931 730 2931 
+C 998 2931 998 3219 1011 3251 
+C 1082 3462 1530 3482 1683 3482 
+C 2227 3482 2349 3213 2349 3034 
+C 2349 2688 2048 2406 1709 2381 
+C 1338 2349 1114 2394 1114 2112 
+C 1114 1926 1216 1869 1325 1869 
+L 1606 1869 
+C 2400 1869 2534 1427 2534 1152 
+C 2534 851 2349 429 1677 429 
+C 1376 429 1184 499 1075 550 
+C 794 685 819 870 806 941 
+C 787 1062 691 1171 544 1171 
+C 416 1171 275 1082 275 883 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-33" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 130.366667 157.68 
+L 130.366667 34.56 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m8329f0df69" x="130.366667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 0.4 -->
+      <g style="fill: #536276" transform="translate(124.381667 167.523125) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-34" d="M 186 1325 
+C 186 1088 320 1075 429 1075 
+L 2022 1075 
+L 2022 480 
+L 1670 480 
+C 1651 480 1632 486 1613 486 
+C 1478 486 1370 435 1370 243 
+C 1370 13 1510 0 1613 0 
+L 2861 0 
+C 3091 0 3110 141 3110 243 
+C 3117 365 3059 486 2867 486 
+C 2848 486 2829 480 2810 480 
+L 2458 480 
+L 2458 1075 
+L 2931 1075 
+C 3162 1082 3168 1229 3168 1318 
+C 3168 1440 3136 1555 2938 1555 
+L 2458 1555 
+L 2458 3680 
+C 2458 3827 2445 3962 2214 3962 
+L 1882 3962 
+C 1741 3962 1696 3942 1606 3802 
+L 288 1722 
+C 205 1581 186 1594 186 1459 
+L 186 1325 
+z
+M 736 1555 
+L 2022 3584 
+L 2022 1555 
+L 736 1555 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-34" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 160.953333 157.68 
+L 160.953333 34.56 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m8329f0df69" x="160.953333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 0.5 -->
+      <g style="fill: #536276" transform="translate(154.968333 167.523125) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-35" d="M 333 877 
+C 333 352 864 -51 1568 -51 
+C 2426 -51 3021 454 3021 1210 
+C 3021 1920 2554 2470 1754 2470 
+C 1574 2470 1299 2438 1050 2304 
+L 1050 3424 
+L 2560 3424 
+C 2784 3424 2797 3590 2797 3674 
+C 2797 3891 2662 3910 2541 3910 
+L 762 3910 
+C 678 3910 506 3904 512 3661 
+L 512 1882 
+C 512 1754 506 1587 762 1587 
+C 890 1587 915 1587 1018 1709 
+C 1107 1811 1312 1984 1747 1984 
+C 2330 1984 2483 1530 2483 1216 
+C 2483 691 2074 429 1568 429 
+C 1210 429 941 589 883 800 
+C 870 858 883 1158 602 1158 
+C 454 1158 333 1043 333 877 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-35" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_6">
+     <!-- λ -->
+     <g transform="translate(97.4175 177.709) scale(0.09 -0.09)">
+      <defs>
+       <path id="CMUTypewriter-Bold-3bb" d="M 186 186 
+C 186 134 211 6 403 0 
+L 486 0 
+C 621 0 672 0 762 198 
+L 1491 1792 
+C 1542 1901 1594 2010 1638 2125 
+C 1920 1350 2394 -26 2899 -26 
+C 3072 -26 3168 115 3168 243 
+C 3168 422 3008 474 2957 512 
+C 2637 749 1939 2925 1862 3110 
+C 1638 3622 1197 4102 614 4102 
+C 307 4102 186 3987 186 3821 
+C 186 3744 243 3552 461 3552 
+C 531 3552 550 3565 614 3565 
+C 890 3565 1158 3334 1344 2957 
+C 1382 2880 1389 2861 1350 2771 
+L 230 326 
+C 211 288 186 237 186 186 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#CMUTypewriter-Bold-3bb"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <path d="M 30.96 124.331932 
+L 168.6 124.331932 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <defs>
+       <path id="m824f218c10" d="M 0 0 
+L -2.5 0 
+" style="stroke: #536276; stroke-width: 0.65"/>
+      </defs>
+      <g>
+       <use xlink:href="#m824f218c10" x="30.96" y="124.331932" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 92.0 -->
+      <g style="fill: #536276" transform="translate(9.8 126.653494) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-39" d="M 288 2662 
+C 288 2438 294 1926 819 1555 
+C 902 1498 1094 1357 1517 1357 
+C 1952 1357 2278 1517 2522 1734 
+C 2426 685 1824 429 1382 429 
+C 1056 429 1005 518 992 570 
+C 992 576 979 870 710 870 
+C 627 870 448 813 448 589 
+C 448 333 608 -51 1376 -51 
+C 2086 -51 3066 397 3066 1984 
+C 3066 3693 2246 3962 1696 3962 
+C 1184 3962 947 3808 845 3738 
+C 442 3462 288 3123 288 2662 
+z
+M 826 2650 
+L 826 2701 
+C 826 3078 1069 3482 1690 3482 
+C 2317 3482 2477 2822 2477 2502 
+C 2477 2176 2150 1843 1619 1843 
+C 1395 1843 1222 1888 1056 2048 
+C 890 2208 826 2381 826 2650 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-39"/>
+       <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13">
+      <path d="M 30.96 84.568295 
+L 168.6 84.568295 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m824f218c10" x="30.96" y="84.568295" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 96.0 -->
+      <g style="fill: #536276" transform="translate(9.8 86.889858) scale(0.076 -0.076)">
+       <defs>
+        <path id="CMUTypewriter-Bold-36" d="M 288 1926 
+C 288 224 1133 -51 1696 -51 
+C 1926 -51 2227 -26 2502 160 
+C 2906 435 3066 774 3066 1248 
+C 3066 1651 2970 1939 2714 2202 
+C 2490 2438 2221 2547 1830 2547 
+C 1402 2547 1075 2394 832 2176 
+C 909 3213 1619 3482 2042 3482 
+C 2189 3482 2330 3456 2362 3341 
+C 2362 3334 2368 3040 2637 3040 
+C 2720 3040 2906 3098 2906 3322 
+C 2906 3578 2733 3962 2054 3962 
+C 1312 3962 288 3494 288 1926 
+z
+M 877 1408 
+C 877 1747 1229 2067 1715 2067 
+C 2003 2067 2118 1997 2195 1946 
+C 2522 1709 2528 1434 2528 1261 
+C 2528 979 2470 819 2304 659 
+C 2131 493 1965 429 1690 429 
+C 1030 429 877 1094 877 1408 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#CMUTypewriter-Bold-39"/>
+       <use xlink:href="#CMUTypewriter-Bold-36" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <path d="M 30.96 44.804659 
+L 168.6 44.804659 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m824f218c10" x="30.96" y="44.804659" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 100.0 -->
+      <g style="fill: #536276" transform="translate(5.81 47.126222) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-31"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(157.499954 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(209.999939 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 30.96 157.68 
+L 30.96 34.56 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 30.96 157.68 
+L 168.6 157.68 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 38.606667 144.21375 
+L 69.193333 81.565313 
+L 99.78 88.813892 
+L 130.366667 90.367159 
+L 160.953333 60.33733 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke: #7855aa; stroke-width: 1.4; stroke-linecap: square"/>
+    <defs>
+     <path id="m880330db68" d="M 0 2.15 
+C 0.570187 2.15 1.117097 1.923462 1.52028 1.52028 
+C 1.923462 1.117097 2.15 0.570187 2.15 0 
+C 2.15 -0.570187 1.923462 -1.117097 1.52028 -1.52028 
+C 1.117097 -1.923462 0.570187 -2.15 0 -2.15 
+C -0.570187 -2.15 -1.117097 -1.923462 -1.52028 -1.52028 
+C -1.923462 -1.117097 -2.15 -0.570187 -2.15 0 
+C -2.15 0.570187 -1.923462 1.117097 -1.52028 1.52028 
+C -1.117097 1.923462 -0.570187 2.15 0 2.15 
+z
+" style="stroke: #ffffff; stroke-width: 0.55"/>
+    </defs>
+    <g clip-path="url(#p6699637e5e)">
+     <use xlink:href="#m880330db68" x="38.606667" y="144.21375" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="69.193333" y="81.565313" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="99.78" y="88.813892" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="130.366667" y="90.367159" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="160.953333" y="60.33733" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 38.606667 140.58946 
+L 69.193333 117.290455 
+L 99.78 80.012045 
+L 130.366667 63.961619 
+L 160.953333 78.976534 
+" clip-path="url(#p6699637e5e)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #c3562f; stroke-width: 1.4"/>
+    <defs>
+     <path id="mcef85f0b1c" d="M -2.15 2.15 
+L 2.15 2.15 
+L 2.15 -2.15 
+L -2.15 -2.15 
+z
+" style="stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#p6699637e5e)">
+     <use xlink:href="#mcef85f0b1c" x="38.606667" y="140.58946" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="69.193333" y="117.290455" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="99.78" y="80.012045" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="130.366667" y="63.961619" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="160.953333" y="78.976534" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- Dynamic Degree -->
+    <g transform="translate(69.46125 28.56) scale(0.0825 -0.0825)">
+     <defs>
+      <path id="CMUTypewriter-Bold-44" d="M 96 256 
+C 96 173 90 0 339 0 
+L 1664 0 
+C 2810 0 3110 1062 3110 1933 
+C 3110 2784 2822 3910 1664 3910 
+L 346 3910 
+C 96 3910 96 3738 96 3654 
+C 96 3475 211 3424 346 3424 
+L 499 3424 
+L 499 480 
+L 358 480 
+C 352 480 346 486 333 486 
+C 262 486 96 461 96 256 
+z
+M 1037 480 
+L 1037 3424 
+L 1549 3424 
+C 2368 3424 2573 2579 2573 1933 
+C 2573 1293 2368 480 1549 480 
+L 1037 480 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-79" d="M 166 2598 
+C 166 2362 326 2362 422 2362 
+L 646 2362 
+C 672 2285 710 2208 736 2131 
+L 1498 96 
+C 1517 45 1523 19 1523 -6 
+C 1523 -38 1517 -64 1498 -115 
+C 1395 -435 1306 -947 794 -966 
+C 800 -947 800 -922 800 -902 
+C 800 -768 666 -672 538 -672 
+C 442 -672 269 -730 269 -947 
+C 269 -1146 435 -1446 806 -1446 
+C 1459 -1446 1747 -755 1875 -352 
+L 2630 2035 
+C 2662 2144 2701 2253 2733 2362 
+L 2970 2362 
+C 3034 2362 3206 2381 3206 2598 
+C 3206 2829 3059 2842 2963 2842 
+L 2118 2842 
+C 1990 2842 1862 2822 1862 2605 
+C 1862 2374 2010 2362 2118 2362 
+L 2285 2362 
+C 2150 1914 1766 749 1747 448 
+L 1722 582 
+L 1638 870 
+L 1523 1229 
+L 1114 2362 
+L 1254 2362 
+C 1357 2362 1510 2368 1510 2598 
+C 1510 2842 1344 2842 1254 2842 
+L 410 2842 
+C 288 2842 166 2810 166 2598 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-6e" d="M 26 237 
+C 26 109 64 0 269 0 
+L 1402 0 
+C 1555 0 1651 51 1651 243 
+C 1651 474 1485 480 1402 480 
+L 1107 480 
+L 1107 1478 
+C 1107 2189 1574 2387 1850 2387 
+C 2221 2387 2253 2157 2253 1837 
+L 2253 480 
+L 2074 480 
+C 1811 480 1818 320 1818 224 
+C 1818 6 1997 0 2067 0 
+L 3091 0 
+C 3168 0 3328 6 3328 243 
+C 3328 467 3168 480 3085 480 
+L 2784 480 
+L 2784 1843 
+C 2784 2253 2739 2867 1952 2867 
+C 1613 2867 1338 2733 1107 2509 
+L 1107 2611 
+C 1107 2822 954 2842 864 2842 
+L 256 2842 
+C 70 2842 26 2720 26 2618 
+C 26 2374 166 2362 282 2362 
+L 570 2362 
+L 570 480 
+L 275 480 
+C 179 480 26 467 26 237 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-61" d="M 301 883 
+C 301 454 666 -26 1299 -26 
+C 1824 -26 2131 192 2253 275 
+C 2355 45 2611 0 2976 0 
+L 3123 0 
+C 3187 0 3354 19 3354 237 
+C 3354 595 3040 429 2758 518 
+L 2758 1773 
+C 2758 2662 2093 2880 1498 2880 
+C 992 2880 531 2829 531 2432 
+C 531 2278 653 2163 800 2163 
+C 883 2163 966 2202 1018 2272 
+C 1082 2362 1018 2400 1478 2400 
+C 2240 2400 2221 1952 2221 1760 
+C 1376 1760 301 1581 301 883 
+z
+M 838 883 
+C 838 1165 1389 1338 2221 1350 
+L 2221 1005 
+C 2221 538 1658 454 1440 454 
+C 1114 454 838 640 838 883 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-6d" d="M -70 243 
+C -70 122 -38 0 173 0 
+L 851 0 
+C 1069 0 1088 141 1088 243 
+C 1088 480 928 480 845 480 
+L 730 480 
+L 730 1485 
+C 730 2016 928 2387 1229 2387 
+C 1453 2387 1466 2106 1466 1862 
+L 1466 480 
+C 1312 480 1197 429 1203 250 
+C 1203 186 1190 0 1446 0 
+L 2010 0 
+C 2214 0 2266 122 2266 243 
+C 2266 474 2086 480 2016 480 
+L 1901 480 
+L 1901 1485 
+C 1901 2035 2112 2387 2400 2387 
+C 2624 2387 2637 2106 2637 1862 
+L 2637 480 
+C 2483 480 2368 429 2374 250 
+C 2374 186 2362 0 2618 0 
+L 3194 0 
+C 3264 0 3430 13 3430 237 
+C 3430 314 3437 480 3174 480 
+L 3066 480 
+L 3066 1901 
+C 3066 2106 3059 2310 2989 2502 
+C 2874 2797 2643 2867 2477 2867 
+C 2381 2867 2048 2848 1811 2522 
+C 1766 2611 1645 2867 1306 2867 
+C 1050 2867 870 2758 730 2624 
+C 717 2822 570 2848 486 2848 
+C 461 2848 435 2842 429 2842 
+L 166 2842 
+C -26 2842 -70 2726 -70 2624 
+C -70 2534 -77 2362 179 2362 
+L 294 2362 
+L 294 480 
+L 166 480 
+C -58 480 -70 333 -70 243 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-69" d="M 1261 3616 
+C 1261 3501 1344 3328 1638 3328 
+C 1946 3328 2022 3501 2022 3616 
+C 2022 3789 1869 3910 1645 3910 
+C 1338 3910 1261 3731 1261 3616 
+z
+M 454 243 
+C 454 13 621 0 691 0 
+L 2714 0 
+C 2925 0 2957 122 2957 243 
+C 2963 371 2906 480 2707 480 
+L 2022 480 
+L 2022 2592 
+C 2022 2701 2010 2842 1792 2842 
+L 762 2842 
+C 506 2842 506 2682 506 2586 
+C 506 2362 672 2362 768 2362 
+L 1491 2362 
+L 1491 480 
+L 704 480 
+C 544 480 454 435 454 243 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-63" d="M 416 1421 
+C 416 563 992 -26 1856 -26 
+C 2746 -26 2976 621 2976 755 
+C 2976 934 2803 941 2707 941 
+L 2682 941 
+C 2579 941 2502 934 2438 768 
+C 2336 506 2144 454 1984 454 
+C 1421 454 954 787 954 1427 
+C 954 1862 1146 2400 1920 2400 
+C 2080 2400 2240 2400 2374 2368 
+C 2413 2214 2547 2163 2637 2163 
+C 2790 2163 2906 2278 2906 2432 
+C 2906 2867 2304 2880 1933 2880 
+L 1888 2880 
+C 915 2880 416 2227 416 1421 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-20" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-65" d="M 301 1434 
+C 301 557 909 -26 1811 -26 
+C 2611 -26 2963 525 2963 742 
+C 2963 934 2790 941 2720 941 
+L 2701 941 
+C 2458 941 2490 864 2394 710 
+C 2253 474 2035 454 1933 454 
+C 1536 454 1030 602 864 1171 
+L 2720 1171 
+C 2803 1171 2970 1184 2970 1395 
+C 2963 2714 2157 2880 1722 2880 
+C 890 2880 301 2310 301 1434 
+z
+M 851 1613 
+C 909 2086 1229 2400 1722 2400 
+C 2106 2400 2381 2170 2419 1613 
+L 851 1613 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-67" d="M 186 -506 
+C 186 -883 493 -1453 1683 -1453 
+C 2848 -1453 3168 -890 3168 -512 
+C 3168 -237 3059 19 2842 179 
+C 2586 365 2240 429 1747 429 
+L 1184 429 
+C 909 429 858 627 858 742 
+C 858 787 864 838 883 902 
+C 1050 813 1242 755 1491 755 
+C 2144 755 2598 1178 2598 1811 
+C 2598 2016 2560 2170 2458 2368 
+L 2611 2400 
+L 2752 2413 
+C 2778 2368 2848 2259 2995 2259 
+C 3136 2259 3264 2368 3264 2528 
+C 3264 2746 3066 2893 2784 2893 
+C 2534 2893 2304 2803 2157 2688 
+L 2150 2688 
+C 1933 2829 1696 2867 1498 2867 
+C 826 2867 384 2438 384 1811 
+C 384 1549 467 1331 589 1165 
+L 589 1152 
+C 467 966 454 800 454 710 
+C 454 576 493 416 595 269 
+C 339 109 186 -186 186 -506 
+z
+M 634 -486 
+C 634 -326 704 -19 1197 -19 
+L 1709 -19 
+C 2182 -19 2720 -51 2720 -499 
+C 2720 -806 2342 -1024 1690 -1024 
+C 826 -1024 634 -698 634 -486 
+z
+M 922 1811 
+C 922 2304 1242 2438 1491 2438 
+C 1894 2438 2061 2144 2061 1818 
+C 2061 1427 1843 1184 1491 1184 
+C 1088 1184 922 1485 922 1811 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-72" d="M 154 256 
+C 154 154 154 0 397 0 
+L 2182 0 
+C 2272 0 2438 6 2438 230 
+C 2438 480 2272 480 2189 480 
+L 1466 480 
+L 1466 1107 
+C 1466 1965 1997 2387 2528 2387 
+C 2547 2387 2573 2381 2592 2381 
+C 2643 2227 2765 2189 2854 2189 
+C 3002 2189 3117 2304 3117 2458 
+C 3117 2624 2995 2867 2515 2867 
+C 2048 2867 1677 2618 1466 2336 
+L 1466 2573 
+C 1466 2637 1478 2842 1235 2842 
+L 403 2842 
+C 282 2842 154 2810 154 2624 
+C 154 2515 154 2362 397 2362 
+L 928 2362 
+L 928 480 
+L 397 480 
+C 205 480 154 365 154 256 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMUTypewriter-Bold-44"/>
+     <use xlink:href="#CMUTypewriter-Bold-79" transform="translate(52.499985 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6e" transform="translate(104.999969 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-61" transform="translate(157.499954 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6d" transform="translate(209.999939 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-69" transform="translate(262.499924 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-63" transform="translate(314.999908 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-20" transform="translate(367.499893 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-44" transform="translate(419.999878 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(472.499863 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-67" transform="translate(524.999847 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-72" transform="translate(577.499832 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(629.999817 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(682.499802 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 201.72 157.68 
+L 339.36 157.68 
+L 339.36 34.56 
+L 201.72 34.56 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_6">
+     <g id="line2d_19">
+      <path d="M 209.366667 157.68 
+L 209.366667 34.56 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m8329f0df69" x="209.366667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 0.1 -->
+      <g style="fill: #536276" transform="translate(203.381667 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_21">
+      <path d="M 239.953333 157.68 
+L 239.953333 34.56 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m8329f0df69" x="239.953333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 0.2 -->
+      <g style="fill: #536276" transform="translate(233.968333 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_23">
+      <path d="M 270.54 157.68 
+L 270.54 34.56 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m8329f0df69" x="270.54" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- 0.3 -->
+      <g style="fill: #536276" transform="translate(264.555 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-33" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_25">
+      <path d="M 301.126667 157.68 
+L 301.126667 34.56 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m8329f0df69" x="301.126667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- 0.4 -->
+      <g style="fill: #536276" transform="translate(295.141667 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-34" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_27">
+      <path d="M 331.713333 157.68 
+L 331.713333 34.56 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m8329f0df69" x="331.713333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- 0.5 -->
+      <g style="fill: #536276" transform="translate(325.728333 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-35" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_16">
+     <!-- λ -->
+     <g transform="translate(268.1775 177.709) scale(0.09 -0.09)">
+      <use xlink:href="#CMUTypewriter-Bold-3bb"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_4">
+     <g id="line2d_29">
+      <path d="M 201.72 127.601446 
+L 339.36 127.601446 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m824f218c10" x="201.72" y="127.601446" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- 95.4 -->
+      <g style="fill: #536276" transform="translate(180.56 129.923008) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-39"/>
+       <use xlink:href="#CMUTypewriter-Bold-35" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-34" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_31">
+      <path d="M 201.72 95.84654 
+L 339.36 95.84654 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m824f218c10" x="201.72" y="95.84654" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <!-- 96.0 -->
+      <g style="fill: #536276" transform="translate(180.56 98.168102) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-39"/>
+       <use xlink:href="#CMUTypewriter-Bold-36" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_33">
+      <path d="M 201.72 64.091634 
+L 339.36 64.091634 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m824f218c10" x="201.72" y="64.091634" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <!-- 96.6 -->
+      <g style="fill: #536276" transform="translate(180.56 66.413197) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-39"/>
+       <use xlink:href="#CMUTypewriter-Bold-36" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-36" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 201.72 157.68 
+L 201.72 34.56 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 201.72 157.68 
+L 339.36 157.68 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_35">
+    <path d="M 209.366667 54.634266 
+L 239.953333 78.765829 
+L 270.54 75.574425 
+L 301.126667 75.074221 
+L 331.713333 129.251442 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke: #7855aa; stroke-width: 1.4; stroke-linecap: square"/>
+    <g clip-path="url(#p26146854cc)">
+     <use xlink:href="#m880330db68" x="209.366667" y="54.634266" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="239.953333" y="78.765829" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="270.54" y="75.574425" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="301.126667" y="75.074221" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="331.713333" y="129.251442" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+    </g>
+   </g>
+   <g id="line2d_36">
+    <path d="M 209.366667 48.02625 
+L 239.953333 59.277514 
+L 270.54 75.850247 
+L 301.126667 94.977553 
+L 331.713333 69.641449 
+" clip-path="url(#p26146854cc)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #c3562f; stroke-width: 1.4"/>
+    <g clip-path="url(#p26146854cc)">
+     <use xlink:href="#mcef85f0b1c" x="209.366667" y="48.02625" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="239.953333" y="59.277514" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="270.54" y="75.850247" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="301.126667" y="94.977553" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="331.713333" y="69.641449" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- Subject Consistency -->
+    <g transform="translate(229.393125 28.56) scale(0.0825 -0.0825)">
+     <defs>
+      <path id="CMUTypewriter-Bold-53" d="M 333 192 
+C 333 141 320 -51 538 -51 
+C 723 -51 755 96 806 205 
+C 890 154 1210 -51 1824 -51 
+C 2650 -51 3021 512 3021 1088 
+C 3021 1350 2938 1549 2835 1702 
+C 2470 2272 1862 2221 1286 2400 
+C 1101 2458 845 2637 845 2931 
+C 845 3155 986 3482 1504 3482 
+C 2291 3482 2298 2822 2323 2746 
+C 2362 2624 2464 2605 2541 2605 
+L 2605 2605 
+C 2842 2605 2848 2746 2848 2842 
+L 2848 3718 
+C 2848 3853 2810 3962 2643 3962 
+C 2477 3962 2445 3853 2381 3699 
+C 2310 3750 2029 3962 1510 3962 
+C 685 3962 333 3411 333 2906 
+C 333 2317 787 2022 1018 1926 
+C 1267 1824 1971 1722 2163 1619 
+C 2266 1568 2509 1395 2509 1056 
+C 2509 794 2368 429 1818 429 
+C 1568 429 1222 480 1018 698 
+C 730 1011 1050 1299 576 1299 
+C 499 1299 339 1299 333 1069 
+L 333 192 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-75" d="M 26 2598 
+C 26 2381 179 2355 288 2355 
+C 320 2355 339 2362 358 2362 
+L 570 2362 
+L 570 723 
+C 570 96 960 -26 1440 -26 
+C 1754 -26 2010 45 2253 211 
+C 2266 13 2400 0 2496 0 
+L 3072 0 
+C 3181 0 3341 26 3328 243 
+C 3328 307 3334 480 3085 480 
+L 2784 480 
+L 2784 2598 
+C 2784 2714 2758 2842 2547 2842 
+L 1952 2842 
+C 1747 2842 1702 2707 1702 2598 
+C 1702 2374 1856 2362 1952 2362 
+L 2253 2362 
+L 2253 1005 
+C 2253 954 2253 909 2246 858 
+C 2214 678 2003 454 1562 454 
+C 1120 454 1107 576 1107 736 
+L 1107 2566 
+C 1107 2662 1120 2842 870 2842 
+L 243 2842 
+C 141 2842 26 2797 26 2598 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-62" d="M 26 3667 
+C 19 3539 77 3424 256 3424 
+L 570 3424 
+L 570 237 
+C 570 19 730 0 819 0 
+L 877 0 
+C 1094 0 1107 147 1107 256 
+L 1107 307 
+C 1299 115 1530 -26 1869 -26 
+C 2464 -26 3155 390 3155 1427 
+C 3155 2342 2630 2867 1946 2867 
+C 1581 2867 1318 2720 1107 2541 
+L 1107 3648 
+C 1107 3770 1114 3910 838 3910 
+L 282 3910 
+C 179 3910 19 3885 26 3667 
+z
+M 1107 1197 
+L 1107 1779 
+C 1107 2029 1434 2387 1850 2387 
+C 2195 2387 2618 2157 2618 1421 
+C 2618 826 2285 454 1786 454 
+C 1318 454 1107 986 1107 1197 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-6a" d="M 1632 3616 
+C 1632 3501 1715 3328 2010 3328 
+C 2317 3328 2400 3501 2400 3616 
+C 2400 3789 2246 3910 2022 3910 
+C 1715 3910 1632 3731 1632 3616 
+z
+M 301 -992 
+C 301 -1037 314 -1197 467 -1312 
+C 653 -1446 947 -1446 1158 -1446 
+L 1203 -1446 
+C 1869 -1446 2400 -979 2400 -230 
+L 2400 2592 
+C 2400 2662 2406 2842 2157 2842 
+L 1018 2842 
+C 941 2842 774 2829 774 2598 
+C 774 2374 934 2362 1024 2362 
+L 1862 2362 
+L 1862 -224 
+C 1862 -640 1677 -966 1261 -966 
+L 1216 -966 
+C 1075 -966 947 -960 832 -928 
+C 800 -806 710 -717 570 -717 
+C 422 -717 301 -826 301 -992 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-74" d="M 160 2586 
+C 160 2477 211 2362 403 2362 
+L 928 2362 
+L 928 1056 
+C 928 947 934 845 947 736 
+C 1037 45 1568 -26 1805 -26 
+C 2451 -26 2880 480 2880 941 
+C 2880 1146 2714 1165 2598 1165 
+C 2477 1165 2387 1139 2349 1018 
+C 2310 896 2381 826 2189 576 
+C 2093 499 2016 454 1894 454 
+C 1472 454 1466 781 1466 1037 
+L 1466 2362 
+L 2515 2362 
+C 2682 2362 2739 2483 2739 2598 
+C 2739 2707 2688 2842 2502 2842 
+L 1466 2842 
+L 1466 3418 
+C 1466 3648 1312 3654 1229 3654 
+L 1197 3654 
+C 1088 3654 928 3654 928 3418 
+L 928 2842 
+L 403 2842 
+C 160 2842 160 2662 160 2586 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-43" d="M 256 1952 
+C 256 614 966 -51 1792 -51 
+C 2541 -51 3098 474 3098 1037 
+C 3098 1242 2957 1248 2848 1248 
+L 2810 1248 
+C 2707 1248 2579 1261 2560 1030 
+C 2528 678 2259 429 1894 429 
+C 1453 429 794 762 794 1958 
+C 794 3142 1453 3482 1888 3482 
+C 2266 3482 2445 3174 2509 2989 
+C 2579 2797 2528 2598 2790 2598 
+C 2816 2598 2835 2605 2848 2605 
+C 3104 2605 3098 2758 3098 2867 
+L 3098 3712 
+C 3098 3731 3123 3962 2893 3962 
+C 2733 3962 2694 3866 2586 3699 
+C 2355 3859 2106 3962 1786 3962 
+C 1171 3962 256 3514 256 1952 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-6f" d="M 333 1421 
+C 333 538 877 -26 1670 -26 
+C 2470 -26 3021 525 3021 1421 
+C 3021 2323 2464 2880 1677 2880 
+C 890 2880 333 2342 333 1421 
+z
+M 870 1478 
+C 870 2150 1299 2400 1677 2400 
+C 2150 2400 2483 2048 2483 1472 
+C 2483 819 2131 454 1677 454 
+C 1344 454 870 691 870 1478 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-73" d="M 461 205 
+C 461 19 570 -26 666 -26 
+C 800 -26 838 32 922 179 
+C 1024 122 1242 -26 1722 -26 
+C 2739 -26 2938 506 2938 858 
+C 2938 1050 2867 1210 2758 1338 
+C 2336 1824 1568 1722 1171 1894 
+C 1075 1933 973 2010 973 2106 
+C 973 2227 1069 2400 1670 2400 
+C 2534 2400 1971 1952 2451 1952 
+L 2502 1952 
+C 2650 1952 2752 1958 2752 2214 
+L 2752 2656 
+C 2752 2842 2630 2880 2541 2880 
+C 2438 2880 2394 2848 2336 2771 
+C 2163 2842 1984 2880 1690 2880 
+C 653 2880 461 2400 461 2074 
+C 461 1869 550 1709 666 1600 
+C 1126 1152 1971 1318 2323 1024 
+C 2362 986 2426 928 2426 832 
+C 2426 506 2016 454 1722 454 
+C 1075 454 1050 832 973 966 
+C 922 1056 838 1069 762 1069 
+C 557 1069 461 1043 461 826 
+L 461 205 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMUTypewriter-Bold-53"/>
+     <use xlink:href="#CMUTypewriter-Bold-75" transform="translate(52.499985 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-62" transform="translate(104.999969 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6a" transform="translate(157.499954 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(209.999939 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-63" transform="translate(262.499924 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-74" transform="translate(314.999908 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-20" transform="translate(367.499893 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-43" transform="translate(419.999878 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6f" transform="translate(472.499863 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6e" transform="translate(524.999847 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-73" transform="translate(577.499832 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-69" transform="translate(629.999817 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-73" transform="translate(682.499802 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-74" transform="translate(734.999786 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(787.499771 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6e" transform="translate(839.999756 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-63" transform="translate(892.499741 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-79" transform="translate(944.999725 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_8">
+    <path d="M 372.48 157.68 
+L 510.12 157.68 
+L 510.12 34.56 
+L 372.48 34.56 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_11">
+     <g id="line2d_37">
+      <path d="M 380.126667 157.68 
+L 380.126667 34.56 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m8329f0df69" x="380.126667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <!-- 0.1 -->
+      <g style="fill: #536276" transform="translate(374.141667 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_39">
+      <path d="M 410.713333 157.68 
+L 410.713333 34.56 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m8329f0df69" x="410.713333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <!-- 0.2 -->
+      <g style="fill: #536276" transform="translate(404.728333 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_41">
+      <path d="M 441.3 157.68 
+L 441.3 34.56 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m8329f0df69" x="441.3" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <!-- 0.3 -->
+      <g style="fill: #536276" transform="translate(435.315 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-33" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_43">
+      <path d="M 471.886667 157.68 
+L 471.886667 34.56 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m8329f0df69" x="471.886667" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <!-- 0.4 -->
+      <g style="fill: #536276" transform="translate(465.901667 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-34" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_45">
+      <path d="M 502.473333 157.68 
+L 502.473333 34.56 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m8329f0df69" x="502.473333" y="157.68" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <!-- 0.5 -->
+      <g style="fill: #536276" transform="translate(496.488333 167.523125) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-30"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-35" transform="translate(104.999969 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_26">
+     <!-- λ -->
+     <g transform="translate(438.9375 177.709) scale(0.09 -0.09)">
+      <use xlink:href="#CMUTypewriter-Bold-3bb"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_7">
+     <g id="line2d_47">
+      <path d="M 372.48 129.593268 
+L 510.12 129.593268 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m824f218c10" x="372.48" y="129.593268" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <!-- 60.0 -->
+      <g style="fill: #536276" transform="translate(351.32 131.91483) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-36"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_49">
+      <path d="M 372.48 86.106186 
+L 510.12 86.106186 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m824f218c10" x="372.48" y="86.106186" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <!-- 61.5 -->
+      <g style="fill: #536276" transform="translate(351.32 88.427748) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-36"/>
+       <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-35" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_51">
+      <path d="M 372.48 42.619104 
+L 510.12 42.619104 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #e5e5e5; stroke-width: 0.55; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m824f218c10" x="372.48" y="42.619104" style="fill: #536276; stroke: #536276; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <!-- 63.0 -->
+      <g style="fill: #536276" transform="translate(351.32 44.940666) scale(0.076 -0.076)">
+       <use xlink:href="#CMUTypewriter-Bold-36"/>
+       <use xlink:href="#CMUTypewriter-Bold-33" transform="translate(52.499985 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-2e" transform="translate(104.999969 0)"/>
+       <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 372.48 157.68 
+L 372.48 34.56 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 372.48 157.68 
+L 510.12 157.68 
+" style="fill: none; stroke: #b7c2ce; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_53">
+    <path d="M 380.126667 52.981943 
+L 410.713333 66.565025 
+L 441.3 86.379381 
+L 471.886667 74.158318 
+L 502.473333 119.518895 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke: #7855aa; stroke-width: 1.4; stroke-linecap: square"/>
+    <g clip-path="url(#p99ae8cc7f1)">
+     <use xlink:href="#m880330db68" x="380.126667" y="52.981943" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="410.713333" y="66.565025" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="441.3" y="86.379381" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="471.886667" y="74.158318" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+     <use xlink:href="#m880330db68" x="502.473333" y="119.518895" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+    </g>
+   </g>
+   <g id="line2d_54">
+    <path d="M 380.126667 48.02625 
+L 410.713333 62.320947 
+L 441.3 64.659303 
+L 471.886667 81.239437 
+L 502.473333 62.141937 
+" clip-path="url(#p99ae8cc7f1)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #c3562f; stroke-width: 1.4"/>
+    <g clip-path="url(#p99ae8cc7f1)">
+     <use xlink:href="#mcef85f0b1c" x="380.126667" y="48.02625" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="410.713333" y="62.320947" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="441.3" y="64.659303" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="471.886667" y="81.239437" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+     <use xlink:href="#mcef85f0b1c" x="502.473333" y="62.141937" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_30">
+    <!-- Aesthetic Quality -->
+    <g transform="translate(404.484375 28.56) scale(0.0825 -0.0825)">
+     <defs>
+      <path id="CMUTypewriter-Bold-41" d="M 173 243 
+C 166 115 218 0 416 0 
+L 1216 0 
+C 1466 0 1466 192 1466 243 
+C 1466 480 1299 480 1216 480 
+L 1120 480 
+L 1216 960 
+L 2131 960 
+L 2234 480 
+L 2131 480 
+C 1869 480 1882 294 1882 224 
+C 1882 19 2035 0 2138 0 
+L 2931 0 
+C 3162 0 3181 141 3181 243 
+C 3187 480 2995 480 2925 480 
+L 2784 480 
+C 2765 582 2739 698 2714 800 
+L 2080 3686 
+C 2061 3782 2029 3962 1792 3962 
+L 1581 3962 
+C 1331 3962 1306 3821 1274 3686 
+L 627 762 
+L 570 480 
+L 416 480 
+C 346 480 166 480 173 243 
+z
+M 1325 1440 
+C 1370 1702 1632 2842 1677 3462 
+C 1690 2957 1958 1850 2029 1440 
+L 1325 1440 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-68" d="M 26 237 
+C 26 109 64 0 269 0 
+L 1402 0 
+C 1555 0 1651 51 1651 243 
+C 1651 474 1485 480 1402 480 
+L 1107 480 
+L 1107 1478 
+C 1107 2195 1574 2387 1850 2387 
+C 2221 2387 2253 2157 2253 1837 
+L 2253 480 
+L 2074 480 
+C 1811 480 1818 320 1818 224 
+C 1818 6 1997 0 2067 0 
+L 3091 0 
+C 3168 0 3328 6 3328 243 
+C 3328 467 3168 480 3085 480 
+L 2784 480 
+L 2784 1843 
+C 2784 2253 2739 2867 1952 2867 
+C 1613 2867 1338 2733 1107 2509 
+L 1107 3642 
+C 1107 3731 1120 3910 864 3910 
+L 275 3910 
+C 141 3910 32 3866 26 3680 
+C 26 3584 32 3424 269 3424 
+L 570 3424 
+L 570 480 
+L 275 480 
+C 179 480 26 467 26 237 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-51" d="M 358 1818 
+C 358 1267 378 941 410 723 
+C 486 166 614 -51 1594 -51 
+L 1939 -51 
+C 1971 -122 2010 -186 2278 -736 
+C 2342 -864 2387 -890 2522 -890 
+L 2733 -890 
+C 2867 -890 2906 -813 2906 -762 
+C 2906 -691 2822 -557 2522 38 
+C 2861 173 2995 378 2995 1869 
+L 2995 2131 
+C 2995 2925 2944 3475 2778 3693 
+C 2566 3962 2074 3962 1728 3962 
+L 1632 3962 
+C 448 3962 378 3776 358 2157 
+L 358 1818 
+z
+M 896 1946 
+L 896 2227 
+C 909 3322 973 3482 1613 3482 
+C 2323 3482 2458 3475 2458 2125 
+L 2458 1760 
+C 2458 794 2368 653 2259 550 
+C 1984 1088 2003 1088 1882 1094 
+L 1645 1094 
+C 1485 1094 1459 1011 1459 966 
+C 1459 883 1555 742 1702 429 
+L 1638 429 
+C 934 429 896 602 896 1946 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-6c" d="M 320 230 
+C 326 0 493 0 563 0 
+L 2790 0 
+C 2886 0 3034 13 3034 243 
+C 3034 480 2874 480 2784 480 
+L 1946 480 
+L 1946 3648 
+C 1946 3725 1952 3910 1702 3910 
+L 570 3910 
+C 435 3910 320 3866 320 3680 
+C 320 3437 461 3424 563 3424 
+L 1408 3424 
+L 1408 480 
+L 576 480 
+C 461 480 320 474 320 230 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMUTypewriter-Bold-41"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(52.499985 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-73" transform="translate(104.999969 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-74" transform="translate(157.499954 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-68" transform="translate(209.999939 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-65" transform="translate(262.499924 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-74" transform="translate(314.999908 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-69" transform="translate(367.499893 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-63" transform="translate(419.999878 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-20" transform="translate(472.499863 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-51" transform="translate(524.999847 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-75" transform="translate(577.499832 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-61" transform="translate(629.999817 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-6c" transform="translate(682.499802 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-69" transform="translate(734.999786 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-74" transform="translate(787.499771 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-79" transform="translate(839.999756 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="legend_1">
+   <g id="line2d_55">
+    <path d="M 175.2975 8.29008 
+L 186.5475 8.29008 
+L 197.7975 8.29008 
+" style="fill: none; stroke: #7855aa; stroke-width: 1.4; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m880330db68" x="186.5475" y="8.29008" style="fill: #7855aa; stroke: #ffffff; stroke-width: 0.55"/>
+    </g>
+   </g>
+   <g id="text_31">
+    <!-- 800→1200 -->
+    <g transform="translate(204.9975 11.44008) scale(0.09 -0.09)">
+     <defs>
+      <path id="CMUTypewriter-Bold-38" d="M 275 1146 
+C 275 499 749 -51 1677 -51 
+C 2579 -51 3072 480 3072 1146 
+C 3072 1530 2854 1939 2285 2112 
+C 2784 2278 2976 2598 2976 2925 
+C 2976 3347 2688 3962 1670 3962 
+C 800 3962 371 3475 371 2925 
+C 371 2598 576 2253 1062 2112 
+C 467 1901 275 1536 275 1146 
+z
+M 813 1152 
+C 813 1568 1133 1869 1677 1869 
+C 2202 1869 2534 1581 2534 1146 
+C 2534 698 2176 429 1677 429 
+C 1248 429 813 653 813 1152 
+z
+M 909 2918 
+C 909 3296 1267 3482 1677 3482 
+C 2054 3482 2445 3309 2445 2918 
+C 2445 2541 2086 2349 1677 2349 
+C 1299 2349 909 2528 909 2918 
+z
+" transform="scale(0.015625)"/>
+      <path id="CMUTypewriter-Bold-2192" d="M 186 1952 
+C 186 1875 218 1690 499 1690 
+L 2349 1690 
+C 2227 1446 2150 1165 2150 1030 
+C 2150 896 2221 819 2381 819 
+L 2445 819 
+C 2835 819 2528 1216 3040 1741 
+C 3130 1830 3168 1869 3168 1952 
+C 3168 2035 3130 2080 3040 2170 
+C 2515 2720 2848 3091 2438 3091 
+L 2381 3091 
+C 2214 3091 2150 2982 2150 2886 
+C 2150 2758 2221 2483 2349 2221 
+L 512 2221 
+C 224 2221 186 2042 186 1952 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#CMUTypewriter-Bold-38"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(52.499985 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(104.999969 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-2192" transform="translate(157.499954 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(209.999939 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(262.499924 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(314.999908 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(367.499893 0)"/>
+    </g>
+   </g>
+   <g id="line2d_56">
+    <path d="M 267.9975 8.29008 
+L 279.2475 8.29008 
+L 290.4975 8.29008 
+" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #c3562f; stroke-width: 1.4"/>
+    <g>
+     <use xlink:href="#mcef85f0b1c" x="279.2475" y="8.29008" style="fill: #c3562f; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_32">
+    <!-- 1000→1200 -->
+    <g transform="translate(297.6975 11.44008) scale(0.09 -0.09)">
+     <use xlink:href="#CMUTypewriter-Bold-31"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(52.499985 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(104.999969 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(157.499954 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-2192" transform="translate(209.999939 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-31" transform="translate(262.499924 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-32" transform="translate(314.999908 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(367.499893 0)"/>
+     <use xlink:href="#CMUTypewriter-Bold-30" transform="translate(419.999878 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6699637e5e">
+   <rect x="30.96" y="34.56" width="137.64" height="123.12"/>
+  </clipPath>
+  <clipPath id="p26146854cc">
+   <rect x="201.72" y="34.56" width="137.64" height="123.12"/>
+  </clipPath>
+  <clipPath id="p99ae8cc7f1">
+   <rect x="372.48" y="34.56" width="137.64" height="123.12"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "kaist": {
+    "source": "https://www.kaist.ac.kr/site/kr/img/layout/logo.svg",
+    "file": "assets/affiliations/kaist.svg"
+  },
+  "georgia_tech": {
+    "source": "https://brand.gatech.edu/sites/default/files/inline-images/GTLogoSeal_RGB_0.png",
+    "file": "assets/affiliations/georgia-tech.png"
+  },
+  "note": "Official university marks displayed to identify author affiliations. Original artwork is preserved."
+}
