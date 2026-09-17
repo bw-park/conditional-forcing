@@ -41,3 +41,27 @@
 .playback-speed button:focus-visible{outline:2px solid #d6c1f2;outline-offset:1px}
 .inline-status{top:49px}
 @media(max-width:520px){.playback-speed{top:6px;left:6px}.playback-speed button{min-width:28px;padding:4px;font-size:11px}}
+
+/* The six VCD weights always occupy one row, with horizontal scrolling on phones. */
+.lambda-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 22px;flex-wrap:wrap}
+.lambda-actions,#lambda-speed-all{display:flex;align-items:center;gap:12px}
+.lambda-actions{flex-wrap:wrap}
+.lambda-scroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:8px}
+.lambda-scroll:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+.lambda-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;min-width:900px}
+.lambda-cell{min-width:0;text-align:center}
+.lambda-cell h4{font:16px var(--mono);color:var(--purple-dark);margin:0 0 10px}
+.lambda-media{position:relative;aspect-ratio:832/480;background:#101115}
+.lambda-media .media-open{position:relative;display:block;width:100%;height:100%;border:0;padding:0;background:none;color:white}
+.lambda-media img,.lambda-media video{display:block;width:100%;height:100%;object-fit:contain}
+.lambda-media .play-circle{width:30px;height:30px;font-size:10px}
+.lambda-cell>.playback-speed,#lambda-speed-all>.playback-speed{position:static;margin-top:8px;background:#f1eef5;border-color:#e2dbe9;color:var(--ink)}
+.lambda-cell .playback-speed button,#lambda-speed-all .playback-speed button{color:var(--muted)}
+.lambda-cell .playback-speed button[aria-pressed=true],#lambda-speed-all .playback-speed button[aria-pressed=true]{background:#dcd0ec;color:#543580}
+#lambda-speed-all>.playback-speed{margin-top:0}
+#lambda-status{color:#9a2940;font-size:14px;margin:8px 0}
+#lambda-status:empty{display:none}
+.ablation .prompt-details summary,.ablation .lambda-metrics summary{font-size:13px}
+.ablation .prompt-details{padding-bottom:14px}
+.lambda-metrics{border-top:1px solid var(--line);padding-top:14px}
+@media(max-width:600px){.lambda-toolbar{gap:14px}.lambda-actions{width:100%;justify-content:space-between;gap:8px}.lambda-actions .button{font-size:12px;padding:9px}.lambda-actions .small-meta{font-size:11px}#lambda-speed-all{gap:6px}.lambda-grid{min-width:990px}}
