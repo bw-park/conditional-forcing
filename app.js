@@ -5,6 +5,7 @@ let media, activeHorizon = 30, shown = 0, activeComparison = null;
 let comparisonVideos = [], comparisonLoading = false, comparisonToken = 0;
 let comparisonOperation = 0, comparisonSeeking = false, comparisonResume = false, seekTimer;
 const videoStates = new WeakMap(), inlineSlots = new Set(), slotStates = new WeakMap();
+const playbackRates = new Map();
 let comparisonVisible = false, comparisonManualPause = false;
 let hlsLoader;
 const mediaReady = fetch('data/media.json?v=10').then(response => {
@@ -44,6 +45,44 @@ function mediaButton(item, compact = false) {
   button.append(imageFor(item), play);
   if (!compact) button.append(element('span', 'duration', `${item.duration} s`));
   return button;
+}
+function updateSpeedControl(control, rate) {
+  control.querySelectorAll('[data-speed]').forEach(button => {
+    button.setAttribute('aria-pressed', String(Number(button.dataset.speed) === rate));
+  });
+}
+function applyPlaybackRate(video, rate) {
+  if (video.defaultPlaybackRate !== rate) video.defaultPlaybackRate = rate;
+  if (video.playbackRate !== rate) video.playbackRate = rate;
+}
+function makeSpeedControl(key, getVideo) {
+  const control = element('div', 'playback-speed');
+  control.setAttribute('role', 'group'); control.setAttribute('aria-label', 'Playback speed');
+  for (const rate of [1, 2, 5]) {
+    const button = element('button', '', `${rate}×`);
+    button.type = 'button'; button.dataset.speed = rate;
+    button.setAttribute('aria-label', `${rate}× playback speed`);
+    control.append(button);
+  }
+  updateSpeedControl(control, playbackRates.get(key) || 1);
+  control.addEventListener('click', event => {
+    const button = event.target.closest('[data-speed]');
+    if (!button) return;
+    event.stopPropagation();
+    const rate = Number(button.dataset.speed);
+    playbackRates.set(key, rate); updateSpeedControl(control, rate);
+    const video = getVideo();
+    if (video) applyPlaybackRate(video, rate);
+  });
+  return control;
+}
+function bindPlaybackRate(video, key, control) {
+  applyPlaybackRate(video, playbackRates.get(key) || 1);
+  video.addEventListener('ratechange', () => {
+    if (videoStates.get(video).disposed) return;
+    playbackRates.set(key, video.playbackRate);
+    updateSpeedControl(control, video.playbackRate);
+  });
 }
 // The host does not serve byte ranges. Fetch small independent HLS segments
 // so an unbuffered seek never requires downloading the preceding video.
@@ -111,7 +150,10 @@ function registerInline(root) {
     slot.dataset.item = button.dataset.item;
     button.classList.remove('featured');
     button.replaceWith(slot); slot.append(button);
-    slotStates.set(slot, {visible:false, manualPause:false, video:null});
+    const rateKey = `inline:${slot.dataset.item}`;
+    const speedControl = makeSpeedControl(rateKey, () => slotStates.get(slot)?.video);
+    slot.append(speedControl);
+    slotStates.set(slot, {visible:false, manualPause:false, video:null, rateKey, speedControl});
     inlineSlots.add(slot); inlineObserver.observe(slot);
   });
 }
@@ -154,9 +196,10 @@ async function startInline(item, slot) {
   if (slotState.video) disposeVideo(slotState.video);
   const topline = slot.querySelector('.media-topline')?.cloneNode(true);
   const video = makeVideo(item, true); video.loop = true;
+  bindPlaybackRate(video, slotState.rateKey, slotState.speedControl);
   const status = element('div', 'inline-status', 'Loading video…');
   status.setAttribute('role', 'status');
-  slot.replaceChildren(video, status);
+  slot.replaceChildren(video, status, slotState.speedControl);
   if (topline) slot.append(topline);
   slotState.video = video;
   const state = videoStates.get(video);
@@ -275,6 +318,9 @@ function selectComparison(id) {
     const cell = element('article', 'comparison-cell' + (id.startsWith('ours-') ? ' ours' : ''));
     const title = element('h4', '', id.startsWith('ours-') ? 'Ours' : item.method);
     const stage = element('div', 'comparison-media'); stage.append(mediaButton(item, true));
+    const rateKey = `comparison:${activeComparison.id}:${id}`;
+    stage.dataset.rateKey = rateKey;
+    stage.append(makeSpeedControl(rateKey, () => stage.querySelector('video')));
     cell.append(title, stage); $('#comparison-grid').append(cell);
   });
   $('#comparison-panel').setAttribute('aria-labelledby', `compare-tab-${id}`);
@@ -302,7 +348,7 @@ function waitUntilReady(video, metadataOnly = false) {
     timer = setTimeout(failed, 30000);
   });
 }
-async function runComparison(t, play) {
+async function runComparison(t, play, align = true) {
   const token = comparisonToken, operation = ++comparisonOperation;
   const current = () => token === comparisonToken && operation === comparisonOperation;
   comparisonResume = play; comparisonLoading = true; comparisonSeeking = true;
@@ -314,23 +360,25 @@ async function runComparison(t, play) {
   $('#comparison-seek').value = t; $('#comparison-time').textContent = clock(t);
   try {
     if (!comparisonVideos.length || comparisonVideos.some(v => v.error || videoStates.get(v).failed)) {
+      align = true;
       $('#comparison-grid').querySelectorAll('video').forEach(disposeVideo);
       comparisonVideos = activeComparison.items.map((id, i) => {
         const video = makeVideo(items.get(id));
-        if (i === 0) video.addEventListener('ended', () => {
-          if (token !== comparisonToken) return;
-          if (comparisonVisible && !document.hidden && !comparisonManualPause) runComparison(0, true);
-          else pauseComparison();
-        });
+        const stage = document.querySelectorAll('.comparison-media')[i];
+        const speedControl = stage.querySelector('.playback-speed');
+        video.loop = true;
+        bindPlaybackRate(video, stage.dataset.rateKey, speedControl);
         if (i === 0) video.addEventListener('timeupdate', () => {
           if (token !== comparisonToken || comparisonSeeking) return;
           $('#comparison-seek').value = video.currentTime;
           $('#comparison-time').textContent = clock(video.currentTime);
-          if (!video.paused && !video.seeking) comparisonVideos.slice(1).forEach(other => {
+          // Independent rates need independent timelines. Equal rates keep the matched comparison in sync.
+          const sharedRate = comparisonVideos.every(other => other.playbackRate === video.playbackRate);
+          if (sharedRate && !video.paused && !video.seeking) comparisonVideos.slice(1).forEach(other => {
             if (!other.seeking && other.readyState >= 3 && Math.abs(other.currentTime - video.currentTime) > .35) other.currentTime = video.currentTime;
           });
         });
-        document.querySelectorAll('.comparison-media')[i].replaceChildren(video);
+        stage.replaceChildren(video, speedControl);
         return video;
       });
       await Promise.all(comparisonVideos.map((video, i) => attachVideo(video, items.get(activeComparison.items[i]), t)));
@@ -338,7 +386,7 @@ async function runComparison(t, play) {
     if (!current()) { comparisonVideos.forEach(v => { if (!comparisonVisible || document.hidden) suspendVideo(v); }); return; }
     await Promise.all(comparisonVideos.map(v => waitUntilReady(v, true)));
     if (!current()) return;
-    comparisonVideos.forEach(v => { v.currentTime = Math.min(t, v.duration - .07); });
+    if (align) comparisonVideos.forEach(v => { v.currentTime = Math.min(t, v.duration - .07); });
     await Promise.all(comparisonVideos.map(v => waitUntilReady(v)));
     if (!current()) return;
     if (play) await Promise.all(comparisonVideos.map(v => v.play()));
@@ -360,7 +408,7 @@ $('#play-comparison').addEventListener('click', () => {
   comparisonManualPause = false;
   let t = Number($('#comparison-seek').value);
   if (t >= activeComparison.horizon - .12) t = 0;
-  runComparison(t, true);
+  runComparison(t, true, false);
 });
 $('#comparison-seek').addEventListener('input', event => {
   const t = Number(event.target.value);
@@ -379,7 +427,7 @@ function updateComparisonVisibility() {
   if (!activeComparison || comparisonManualPause || comparisonLoading || comparisonSeeking || comparisonVideos.some(v => !v.paused)) return;
   let t = Number($('#comparison-seek').value);
   if (t >= activeComparison.horizon - .12) t = 0;
-  runComparison(t, true);
+  runComparison(t, true, false);
 }
 document.addEventListener('visibilitychange', () => {
   inlineSlots.forEach(updateInline);

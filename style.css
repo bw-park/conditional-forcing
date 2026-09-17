@@ -32,3 +32,12 @@
 @media (prefers-reduced-motion:reduce){.method-image{transition:none}}
 
 @media(max-width:520px){.affiliations{gap:14px 22px;margin:18px 0 24px}.affiliation{gap:7px}.affiliation-kaist{width:96px}.affiliation-gatech{width:174px}.affiliation sup{font-size:11px;margin-top:5px}}
+
+/* Per-video speed controls stay above the native playback controls. */
+.playback-speed{position:absolute;top:8px;left:8px;z-index:3;display:inline-flex;gap:2px;padding:2px;border:1px solid #ffffff38;border-radius:5px;background:#17151ed9;color:#fff;line-height:1}
+.playback-speed button{min-width:30px;min-height:28px;border:0;border-radius:3px;padding:5px;font:12px var(--mono);line-height:1;color:#eeeaf5;background:transparent;touch-action:manipulation}
+.playback-speed button:hover{background:#ffffff26}
+.playback-speed button[aria-pressed=true]{background:#eee8f6;color:#543580}
+.playback-speed button:focus-visible{outline:2px solid #d6c1f2;outline-offset:1px}
+.inline-status{top:49px}
+@media(max-width:520px){.playback-speed{top:6px;left:6px}.playback-speed button{min-width:28px;padding:4px;font-size:11px}}
