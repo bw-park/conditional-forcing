@@ -213,10 +213,9 @@ function renderGallery(reset = false) {
   for (const id of next) {
     const item = items.get(id);
     const card = element('article', 'video-card'); card.id = `card-${id}`;
-    const title = element('h3', '', item.title);
     const prompt = element('details', 'card-prompt');
     prompt.append(element('summary', '', `Prompt ${id.split('-').at(-1)}`), element('p', '', item.prompt));
-    card.append(mediaButton(item), title, prompt); fragment.append(card);
+    card.append(mediaButton(item), prompt); fragment.append(card);
   }
   grid.append(fragment); shown += next.length; registerInline(grid);
   $('#load-more').hidden = shown >= ids.length;
@@ -260,7 +259,6 @@ function selectComparison(id) {
   pauseComparison(); ++comparisonToken; comparisonManualPause = false;
   $('#comparison-grid').querySelectorAll('video').forEach(disposeVideo); comparisonVideos = [];
   activeComparison = media.comparisons.find(c => c.id === id);
-  $('#comparison-title').textContent = activeComparison.title;
   $('#comparison-meta').textContent = `${activeComparison.horizon} seconds · ${activeComparison.horizon === 30 ? 'MovieGen' : 'VBench'} prompt ${String(activeComparison.promptIndex).padStart(3, '0')} · seed 0`;
   $('#comparison-prompt').textContent = activeComparison.prompt;
   const editNote = activeComparison.items.map(id => items.get(id).displayEdit).filter(Boolean).join(' ');
