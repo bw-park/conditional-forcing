@@ -8,7 +8,7 @@ const videoStates = new WeakMap(), inlineSlots = new Set(), slotStates = new Wea
 const playbackRates = new Map();
 let comparisonVisible = false, comparisonManualPause = false;
 let hlsLoader;
-const mediaReady = fetch('data/media.json?v=15').then(response => {
+const mediaReady = fetch('data/media.json?v=16').then(response => {
   if (!response.ok) throw new Error('The video collection could not be loaded.');
   return response.json();
 }).then(data => {
