@@ -6,6 +6,7 @@ let comparisonVideos = [], comparisonLoading = false, comparisonToken = 0;
 let comparisonOperation = 0, comparisonSeeking = false, comparisonResume = false, seekTimer;
 const videoStates = new WeakMap(), inlineSlots = new Set(), slotStates = new WeakMap();
 const playbackRates = new Map();
+const inlineGroups = new Map();
 let comparisonVisible = false, comparisonManualPause = false;
 let hlsLoader;
 const mediaReady = fetch('data/media.json?v=16').then(response => {
@@ -84,6 +85,50 @@ function bindPlaybackRate(video, key, control) {
     updateSpeedControl(control, video.playbackRate);
   });
 }
+// Group intent also applies to cards that have not entered the viewport yet.
+function setupInlineGroup(rootId, controlsId, playId, label) {
+  const root = document.getElementById(rootId), play = document.getElementById(playId);
+  const group = {root, play, rate:1, paused:false, prefix:`inline:${rootId}:`};
+  group.speed = makeSpeedControl(`${rootId}:all`, () => null);
+  group.speed.setAttribute('aria-label', `Playback speed for all ${label}`);
+  document.getElementById(controlsId).append(group.speed);
+  inlineGroups.set(root, group);
+  group.speed.addEventListener('click', event => {
+    const button = event.target.closest('[data-speed]');
+    if (!button) return;
+    group.rate = Number(button.dataset.speed);
+    for (const key of playbackRates.keys()) {
+      if (key.startsWith(group.prefix)) playbackRates.set(key, group.rate);
+    }
+    root.querySelectorAll('.inline-player').forEach(slot => {
+      const state = slotStates.get(slot);
+      playbackRates.set(state.rateKey, group.rate);
+      updateSpeedControl(state.speedControl, group.rate);
+      if (state.video) applyPlaybackRate(state.video, group.rate);
+    });
+    updateInlineGroup(group);
+  });
+  play.addEventListener('click', () => {
+    const slots = [...root.querySelectorAll('.inline-player')];
+    group.paused = slots.some(slot => !slotStates.get(slot).manualPause);
+    slots.forEach(slot => {
+      const state = slotStates.get(slot);
+      state.manualPause = group.paused;
+      if (group.paused && state.video) suspendVideo(state.video);
+      else updateInline(slot);
+    });
+    updateInlineGroup(group);
+  });
+}
+function updateInlineGroup(group) {
+  if (!group) return;
+  const states = [...group.root.querySelectorAll('.inline-player')].map(slot => slotStates.get(slot));
+  const rates = states.map(state => playbackRates.get(state.rateKey) || 1);
+  updateSpeedControl(group.speed, rates.length && rates.every(rate => rate === rates[0]) ? rates[0] : null);
+  group.play.textContent = states.some(state => !state.manualPause) ? 'Pause together Ⅱ' : 'Play together ▶';
+}
+setupInlineGroup('featured-grid', 'featured-speed-all', 'play-featured', 'featured videos');
+setupInlineGroup('video-gallery', 'gallery-speed-all', 'play-gallery', 'gallery videos');
 // The host does not serve byte ranges. Fetch small independent HLS segments
 // so an unbuffered seek never requires downloading the preceding video.
 function loadHls() {
@@ -144,18 +189,22 @@ function disposeVideo(video) {
 }
 // Observe stable poster slots: only visible examples create a player or fetch video.
 function registerInline(root) {
+  const group = inlineGroups.get(root);
   root.querySelectorAll('.media-open').forEach(button => {
     if (button.closest('.inline-player')) return;
     const slot = element('div', 'inline-player' + (button.classList.contains('featured') ? ' featured' : ''));
     slot.dataset.item = button.dataset.item;
     button.classList.remove('featured');
     button.replaceWith(slot); slot.append(button);
-    const rateKey = `inline:${slot.dataset.item}`;
+    const rateKey = `${group.prefix}${slot.dataset.item}`;
+    if (!playbackRates.has(rateKey)) playbackRates.set(rateKey, group.rate);
     const speedControl = makeSpeedControl(rateKey, () => slotStates.get(slot)?.video);
     slot.append(speedControl);
-    slotStates.set(slot, {visible:false, manualPause:false, video:null, rateKey, speedControl});
+    slotStates.set(slot, {visible:false, manualPause:group.paused, video:null, rateKey, speedControl, group});
+    speedControl.addEventListener('click', () => updateInlineGroup(group));
     inlineSlots.add(slot); inlineObserver.observe(slot);
   });
+  updateInlineGroup(group);
 }
 function clearInline(root) {
   root.querySelectorAll('.inline-player').forEach(slot => {
@@ -182,7 +231,10 @@ function updateInline(slot) {
     if (state.video) suspendVideo(state.video);
     return;
   }
-  if (state.manualPause) return;
+  if (state.manualPause) {
+    if (state.video) suspendVideo(state.video);
+    return;
+  }
   if (!state.video) { startInline(items.get(slot.dataset.item), slot); return; }
   const playback = videoStates.get(state.video);
   if (playback.disposed || playback.failed) return;
@@ -197,6 +249,7 @@ async function startInline(item, slot) {
   const topline = slot.querySelector('.media-topline')?.cloneNode(true);
   const video = makeVideo(item, true); video.loop = true;
   bindPlaybackRate(video, slotState.rateKey, slotState.speedControl);
+  video.addEventListener('ratechange', () => { if (!videoStates.get(video).disposed) updateInlineGroup(slotState.group); });
   const status = element('div', 'inline-status', 'Loading video…');
   status.setAttribute('role', 'status');
   slot.replaceChildren(video, status, slotState.speedControl);
@@ -216,11 +269,14 @@ async function startInline(item, slot) {
   video.addEventListener('playing', ready); video.addEventListener('canplay', ready);
   video.addEventListener('error', failed); video.addEventListener('playbackerror', failed);
   video.addEventListener('pause', () => {
-    if (!state.disposed && !state.suspended && !state.failed && !video.ended && !video.seeking) slotState.manualPause = true;
+    if (video.paused && !state.disposed && !state.suspended && !state.failed && !video.ended && !video.seeking) slotState.manualPause = true;
+    if (!state.disposed) updateInlineGroup(slotState.group);
   });
   video.addEventListener('play', () => {
+    if (video.paused) return;
     if (!slotState.visible || document.hidden) { suspendVideo(video); return; }
     slotState.manualPause = false; resumeVideo(video);
+    updateInlineGroup(slotState.group);
   });
   try {
     await attachVideo(video, item);
@@ -244,7 +300,7 @@ document.addEventListener('click', event => {
     return;
   }
   const slot = button.closest('.inline-player'), state = slotStates.get(slot);
-  if (state) { state.manualPause = false; state.visible = true; updateInline(slot); }
+  if (state) { state.manualPause = false; state.visible = true; updateInline(slot); updateInlineGroup(state.group); }
 });
 
 function renderGallery(reset = false) {
@@ -299,7 +355,7 @@ function renderComparisonTabs() {
   });
 }
 function selectComparison(id) {
-  pauseComparison(); ++comparisonToken; comparisonManualPause = false;
+  pauseComparison(); ++comparisonToken;
   $('#comparison-grid').querySelectorAll('video').forEach(disposeVideo); comparisonVideos = [];
   activeComparison = media.comparisons.find(c => c.id === id);
   $('#comparison-meta').textContent = `${activeComparison.horizon} seconds · ${activeComparison.horizon === 30 ? 'MovieGen' : 'VBench'} prompt ${String(activeComparison.promptIndex).padStart(3, '0')} · seed 0`;
@@ -320,16 +376,41 @@ function selectComparison(id) {
     if (item.methodNote) title.append(element('small', 'comparison-method-note', item.methodNote));
     const stage = element('div', 'comparison-media'); stage.append(mediaButton(item, true));
     const rateKey = `comparison:${activeComparison.id}:${id}`;
+    if (!playbackRates.has(rateKey)) playbackRates.set(rateKey, playbackRates.get('comparison:all') || 1);
     stage.dataset.rateKey = rateKey;
-    stage.append(makeSpeedControl(rateKey, () => stage.querySelector('video')));
+    const speed = makeSpeedControl(rateKey, () => stage.querySelector('video'));
+    speed.addEventListener('click', updateComparisonSpeed);
+    stage.append(speed);
     cell.append(title, stage); $('#comparison-grid').append(cell);
   });
   $('#comparison-panel').setAttribute('aria-labelledby', `compare-tab-${id}`);
   document.querySelectorAll('[data-comparison]').forEach(tab => {
     const selected = tab.dataset.comparison === id; tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1;
   });
-  updateComparisonVisibility();
+  updateComparisonSpeed(); updateComparisonVisibility();
 }
+const comparisonAllSpeed = makeSpeedControl('comparison:all', () => null);
+comparisonAllSpeed.setAttribute('aria-label', 'Playback speed for all comparison videos');
+$('#comparison-speed-all').append(comparisonAllSpeed);
+function updateComparisonSpeed() {
+  const rates = [...document.querySelectorAll('.comparison-media')].map(stage => playbackRates.get(stage.dataset.rateKey) || 1);
+  updateSpeedControl(comparisonAllSpeed, rates.length && rates.every(rate => rate === rates[0]) ? rates[0] : null);
+}
+comparisonAllSpeed.addEventListener('click', event => {
+  const button = event.target.closest('[data-speed]');
+  if (!button) return;
+  const rate = Number(button.dataset.speed);
+  for (const key of playbackRates.keys()) {
+    if (key.startsWith('comparison:')) playbackRates.set(key, rate);
+  }
+  document.querySelectorAll('.comparison-media').forEach(stage => {
+    playbackRates.set(stage.dataset.rateKey, rate);
+    updateSpeedControl(stage.querySelector('.playback-speed'), rate);
+    const video = stage.querySelector('video');
+    if (video) applyPlaybackRate(video, rate);
+  });
+  updateComparisonSpeed();
+});
 $('#comparison-tabs').addEventListener('click', event => {
   const button = event.target.closest('[data-comparison]');
   if (button) selectComparison(button.dataset.comparison);
@@ -369,6 +450,7 @@ async function runComparison(t, play, align = true) {
         const speedControl = stage.querySelector('.playback-speed');
         video.loop = true;
         bindPlaybackRate(video, stage.dataset.rateKey, speedControl);
+        video.addEventListener('ratechange', () => { if (!videoStates.get(video).disposed) updateComparisonSpeed(); });
         if (i === 0) video.addEventListener('timeupdate', () => {
           if (token !== comparisonToken || comparisonSeeking) return;
           $('#comparison-seek').value = video.currentTime;

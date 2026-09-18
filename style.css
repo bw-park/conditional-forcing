@@ -96,3 +96,20 @@
 .teacher-chart img{display:block;width:100%;height:auto}
 .teacher-chart figcaption{font:11px/1.5 var(--mono);color:var(--muted);text-align:center;margin-top:8px}
 @media(max-width:600px){.teacher-actions{width:100%;flex-wrap:wrap;gap:10px;justify-content:space-between}.teacher-actions .button{font-size:12px;padding:9px}.teacher-actions .small-meta{font-size:11px}#teacher-speed-all{gap:6px}.teacher-cell h4{font-size:16px}.teacher-heading>.teacher-description{font-size:16px}}
+
+/* One consistent toolbar for every video group; cards remain lazy-loaded. */
+.video-group-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.video-group-speed{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.video-group-speed>.playback-speed{position:static;background:#f1eef5;border-color:#e2dbe9;color:var(--ink)}
+.video-group-speed .playback-speed button{color:var(--muted)}
+.video-group-speed .playback-speed button[aria-pressed=true]{background:#dcd0ec;color:#543580}
+.featured-actions{justify-content:flex-end;margin:0 0 14px}
+.gallery-actions{justify-content:flex-end;margin:0 0 22px}
+.comparison-top{flex-wrap:wrap}
+.video-group-actions .button{white-space:nowrap}
+@media(max-width:600px){
+ .video-group-actions{width:100%;gap:10px;justify-content:space-between}
+ .video-group-speed{gap:6px}
+ .video-group-actions .small-meta{font-size:11px}
+ .video-group-actions .button{font-size:12px;padding:9px}
+}

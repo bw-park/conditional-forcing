@@ -21,7 +21,7 @@ mediaReady.then(data => {
   function selectExample(id) {
     stop(); videos.forEach(disposeVideo); videos = [];
     experiment = experiments.find(example => example.id === id);
-    manualPause = false; grid.replaceChildren();
+    grid.replaceChildren();
     cells = experiment.entries.map(entry => {
       const item = items.get(entry.item);
       const cell = element('article', 'teacher-cell' + (entry.key === 'ours' ? ' ours' : ''));
@@ -29,6 +29,7 @@ mediaReady.then(data => {
       const title = element('h4', '', entry.label);
       const stage = element('div', 'teacher-media');
       const key = `teacher:${item.id}`;
+      if (!playbackRates.has(key)) playbackRates.set(key, playbackRates.get('teacher:all') || 1);
       const speed = makeSpeedControl(key, () => stage.querySelector('video'));
       speed.setAttribute('aria-label', `Playback speed for ${entry.label}`);
       stage.append(mediaButton(item, true));
@@ -145,6 +146,9 @@ mediaReady.then(data => {
     const button = event.target.closest('[data-speed]');
     if (!button) return;
     const rate = Number(button.dataset.speed);
+    for (const key of playbackRates.keys()) {
+      if (key.startsWith('teacher:')) playbackRates.set(key, rate);
+    }
     cells.forEach((cell, index) => {
       playbackRates.set(cell.key, rate); updateSpeedControl(cell.speed, rate);
       if (videos[index]) applyPlaybackRate(videos[index], rate);
