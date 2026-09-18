@@ -12,7 +12,7 @@ mediaReady.then(data => {
     const item = items.get(entry.item);
     const cell = element('article', 'lambda-cell');
     cell.dataset.lambda = entry.lambda;
-    const title = element('h4', '', `λ = ${entry.lambda}`);
+    const title = element('h4', '', `λ = ${entry.lambda.toFixed(1)}`);
     const stage = element('div', 'lambda-media');
     const key = `ablation:${item.id}`;
     const speed = makeSpeedControl(key, () => stage.querySelector('video'));

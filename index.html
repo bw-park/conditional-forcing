@@ -6,10 +6,10 @@
 <meta name="description" content="Conditional Forcing learns and distills long-horizon continuation under evolving video histories. Explore 30-second and 60-second videos and matched comparisons.">
 <meta name="theme-color" content="#fafafa">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="style.css?v=18">
-<script src="app.js?v=16" defer></script>
-<script src="teacher-comparison.js?v=1" defer></script>
-<script src="ablation.js?v=1" defer></script>
+<link rel="stylesheet" href="style.css?v=19">
+<script src="app.js?v=17" defer></script>
+<script src="teacher-comparison.js?v=2" defer></script>
+<script src="ablation.js?v=2" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -45,11 +45,15 @@
 <section class="section wrap" id="teacher-initialization" aria-labelledby="teacher-heading">
 <div class="section-heading"><p class="eyebrow">02 / TEACHER INITIALIZATION</p><h2 id="teacher-heading">What does the teacher change?</h2><p>Short TF, Short TF + CD, and Long TF, compared under identical self-rollout distillation.</p></div>
 <div class="comparison-shell">
-<div class="teacher-toolbar"><span class="small-meta">30 seconds · MovieGen prompt 102 · seed 0</span><div class="teacher-actions"><div id="teacher-speed-all"><span class="small-meta">All videos</span></div><button type="button" class="button primary" id="play-teacher">Play together ▶</button></div></div>
+<div class="comparison-tabs" id="teacher-tabs" role="tablist" aria-label="Teacher initialization example"></div>
+<div id="teacher-panel" role="tabpanel">
+<div class="teacher-toolbar"><span class="small-meta" id="teacher-meta">30 seconds · MovieGen prompt 102 · seed 0</span><div class="teacher-actions"><div id="teacher-speed-all"><span class="small-meta">All videos</span></div><button type="button" class="button primary" id="play-teacher">Play together ▶</button></div></div>
 <div class="teacher-scroll" tabindex="0" role="region" aria-label="Three teacher initializations; scroll horizontally on small screens"><div class="teacher-grid" id="teacher-grid"></div></div>
 <div class="comparison-timeline"><span id="teacher-time">0:00</span><input type="range" id="teacher-seek" min="0" max="30" step="0.1" value="0" aria-label="Teacher comparison playback position"><span>0:30</span></div>
 <p id="teacher-status" role="status"></p>
 <details class="prompt-details"><summary>Read the full prompt</summary><p id="teacher-prompt"></p></details>
+<details class="teacher-keyframes" open><summary>Compare key frames · 0, 8, 15, 23, 30 s</summary><div class="teacher-frames-scroll" tabindex="0" role="region" aria-label="Frames across the three teacher initializations; scroll horizontally on small screens"><img id="teacher-frames" src="assets/teacher-102-frames.webp" width="1718" height="777" loading="lazy" decoding="async" alt="Three teacher initializations at matching rollout times."></div></details>
+</div>
 </div>
 <div class="teacher-evidence"><div><p class="eyebrow">FIGURE 3 / 30-SECOND ROLLOUTS</p><h3>A stronger initialization for distillation.</h3><p>Causal CD substantially improves the dynamics of Short TF. Long TF further improves motion while preserving comparable subject consistency and aesthetic quality, without an additional causal CD initialization stage.</p><p class="muted">Long TF uses λ = 0 here, isolating the effect of teacher initialization from VCD.</p></div><figure><img src="assets/teacher-initialization.svg" width="927" height="1072" loading="lazy" decoding="async" alt="Subject Consistency, Dynamic Degree, and Aesthetic Quality: Short TF 98.19, 51.30, 63.90; Short TF + CD 96.04, 81.72, 58.82; Long TF 96.83, 90.73, 62.51."><figcaption>128 matched prompts · 95% bootstrap intervals.</figcaption></figure></div>
 </section>
@@ -64,7 +68,7 @@
 <div class="comparison-timeline"><span id="lambda-time">0:00</span><input type="range" id="lambda-seek" min="0" max="30" step="0.1" value="0" aria-label="VCD weight comparison playback position"><span>0:30</span></div>
 <p id="lambda-status" role="status"></p>
 <details class="prompt-details"><summary>Read the full prompt</summary><p id="lambda-prompt"></p></details>
-<details class="lambda-metrics"><summary>Quantitative results</summary><p>Effect of the VCD weight λ on Dynamic Degree, Subject Consistency, and Aesthetic Quality for 30-second rollouts.</p><img src="assets/lambda-ablation.svg?v=2" width="1074" height="354" loading="lazy" decoding="async" alt="VCD weight ablation from lambda 0.1 to 0.5 across Dynamic Degree, Subject Consistency, and Aesthetic Quality on 30-second videos."></details>
+<details class="lambda-metrics"><summary>Quantitative results</summary><p>Effect of the VCD weight λ from 0.0 to 0.4 on Dynamic Degree, Subject Consistency, and Aesthetic Quality for 30-second rollouts.</p><img src="assets/lambda-ablation.svg?v=3" width="1074" height="354" loading="lazy" decoding="async" alt="VCD weight ablation from lambda 0.0 to 0.4 across Dynamic Degree, Subject Consistency, and Aesthetic Quality on 30-second videos."></details>
 </div></details></section>
 <section class="section wrap" id="videos"><div class="section-heading"><p class="eyebrow">05 / VIDEO GALLERY</p><h2>A longer look.</h2><p>Explore people, animals, imagined worlds, and changing viewpoints across 30- and 60-second generations.</p></div><div class="gallery-toolbar"><div class="segmented" role="tablist" aria-label="Video duration"><button type="button" id="gallery-tab-30" role="tab" aria-selected="true" aria-controls="gallery-panel" data-horizon="30">30 seconds <span>36</span></button><button type="button" id="gallery-tab-60" role="tab" aria-selected="false" aria-controls="gallery-panel" data-horizon="60" tabindex="-1">60 seconds <span>36</span></button></div><span class="small-meta" id="gallery-count" role="status">72 selected examples</span></div><div id="gallery-panel" role="tabpanel" aria-labelledby="gallery-tab-30"><div id="video-gallery" class="video-grid"></div><button type="button" class="button load-more" id="load-more">Show 12 more videos <span aria-hidden="true">+</span></button></div><p class="gallery-note">Videos play automatically while in view. Use the controls to pause or explore a moment, and expand each original prompt below. These are selected qualitative examples; the table above reports aggregate evaluation.</p><noscript><p><a href="https://huggingface.co/spaces/bw-park/cf-gallery-hq">Open the full video gallery on Hugging Face.</a></p></noscript></section>
 </main>

@@ -1,27 +1,59 @@
 'use strict';
 // Figure 3: matched teacher initializations, independent of the other players.
 mediaReady.then(data => {
-  const experiment = data.teacherComparison;
-  if (!experiment) return;
+  const experiments = data.teacherComparison?.examples;
+  if (!experiments?.length) return;
+  let experiment, cells = [];
   const root = $('#teacher-initialization'), grid = $('#teacher-grid');
   const playButton = $('#play-teacher'), seek = $('#teacher-seek');
   const status = $('#teacher-status'), time = $('#teacher-time');
   let videos = [], operation = 0, visible = false, manualPause = false;
   let busy = false, seeking = false, seekResume = false, timer;
-  const cells = experiment.entries.map(entry => {
-    const item = items.get(entry.item);
-    const cell = element('article', 'teacher-cell' + (entry.key === 'ours' ? ' ours' : ''));
-    cell.dataset.method = entry.key;
-    const title = element('h4', '', entry.label);
-    const stage = element('div', 'teacher-media');
-    const key = `teacher:${item.id}`;
-    const speed = makeSpeedControl(key, () => stage.querySelector('video'));
-    speed.setAttribute('aria-label', `Playback speed for ${entry.label}`);
-    stage.append(mediaButton(item, true));
-    cell.append(title, stage, speed); grid.append(cell);
-    return {item, stage, key, speed};
+  const tabs = $('#teacher-tabs');
+  experiments.forEach(example => {
+    const tab = element('button', '', example.title);
+    tab.type = 'button'; tab.id = `teacher-tab-${example.id}`;
+    tab.dataset.example = example.id; tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-controls', 'teacher-panel');
+    tab.setAttribute('aria-selected', 'false'); tab.tabIndex = -1;
+    tabs.append(tab);
   });
-  $('#teacher-prompt').textContent = experiment.prompt;
+  function selectExample(id) {
+    stop(); videos.forEach(disposeVideo); videos = [];
+    experiment = experiments.find(example => example.id === id);
+    manualPause = false; grid.replaceChildren();
+    cells = experiment.entries.map(entry => {
+      const item = items.get(entry.item);
+      const cell = element('article', 'teacher-cell' + (entry.key === 'ours' ? ' ours' : ''));
+      cell.dataset.method = entry.key;
+      const title = element('h4', '', entry.label);
+      const stage = element('div', 'teacher-media');
+      const key = `teacher:${item.id}`;
+      const speed = makeSpeedControl(key, () => stage.querySelector('video'));
+      speed.setAttribute('aria-label', `Playback speed for ${entry.label}`);
+      stage.append(mediaButton(item, true));
+      cell.append(title, stage, speed); grid.append(cell);
+      speed.addEventListener('click', sharedSpeed);
+      return {item, stage, key, speed};
+    });
+    $('#teacher-prompt').textContent = experiment.prompt;
+    seek.value = 0; time.textContent = '0:00'; status.textContent = '';
+    $('#teacher-meta').textContent = `30 seconds · MovieGen prompt ${String(experiment.promptIndex).padStart(3, '0')} · seed 0`;
+    const frames = $('#teacher-frames');
+    frames.src = experiment.frames.src; frames.alt = experiment.frames.alt;
+    frames.width = experiment.frames.width; frames.height = experiment.frames.height;
+    $('#teacher-panel').setAttribute('aria-labelledby', `teacher-tab-${experiment.id}`);
+    tabs.querySelectorAll('[role=tab]').forEach(tab => {
+      const selected = tab.dataset.example === id;
+      tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1;
+    });
+    sharedSpeed(); updateVisibility();
+  }
+  tabs.addEventListener('click', event => {
+    const tab = event.target.closest('[data-example]');
+    if (tab) selectExample(tab.dataset.example);
+  });
+  tabs.addEventListener('keydown', keyboardTabs);
   const allSpeed = makeSpeedControl('teacher:all', () => null);
   allSpeed.setAttribute('aria-label', 'Playback speed for all teacher initializations');
   $('#teacher-speed-all').append(allSpeed);
@@ -50,7 +82,7 @@ mediaReady.then(data => {
         videos.forEach(disposeVideo); align = true;
         videos = cells.map((cell, index) => {
           const video = makeVideo(cell.item);
-          video.setAttribute('aria-label', `${experiment.entries[index].label}, MovieGen prompt 102, 30 seconds`);
+          video.setAttribute('aria-label', `${experiment.entries[index].label}, MovieGen prompt ${experiment.promptIndex}, 30 seconds`);
           video.loop = true;
           bindPlaybackRate(video, cell.key, cell.speed);
           video.addEventListener('ratechange', sharedSpeed);
@@ -112,7 +144,6 @@ mediaReady.then(data => {
     time.textContent = clock(seek.value); clearTimeout(timer);
     timer = setTimeout(() => run(Number(seek.value), seekResume), 120);
   });
-  cells.forEach(cell => cell.speed.addEventListener('click', sharedSpeed));
   allSpeed.addEventListener('click', event => {
     const button = event.target.closest('[data-speed]');
     if (!button) return;
@@ -129,6 +160,7 @@ mediaReady.then(data => {
   }, {threshold: [0, .05]});
   observer.observe(root.querySelector('.teacher-scroll'));
   document.addEventListener('visibilitychange', updateVisibility);
+  selectExample(experiments[0].id);
 }).catch(() => {
   $('#teacher-status').textContent = 'The teacher comparison could not load. Please reload the page.';
 });
