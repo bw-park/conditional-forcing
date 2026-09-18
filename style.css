@@ -32,6 +32,8 @@
 @media (prefers-reduced-motion:reduce){.method-image{transition:none}}
 
 @media(max-width:520px){.affiliations{gap:14px 22px;margin:18px 0 24px}.affiliation{gap:7px}.affiliation-kaist{width:96px}.affiliation-gatech{width:174px}.affiliation sup{font-size:11px;margin-top:5px}}
+.author-note{margin:-12px 0 24px;font-size:13px;color:var(--muted)}
+.author-note sup{color:var(--purple)}
 
 /* Per-video speed controls stay above the native playback controls. */
 .playback-speed{position:absolute;top:8px;left:8px;z-index:3;display:inline-flex;gap:2px;padding:2px;border:1px solid #ffffff38;border-radius:5px;background:#17151ed9;color:#fff;line-height:1}
