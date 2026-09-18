@@ -68,12 +68,13 @@
 .lambda-metrics{border-top:1px solid var(--line);padding-top:14px}
 @media(max-width:600px){.lambda-toolbar{gap:14px}.lambda-actions{width:100%;justify-content:space-between;gap:8px}.lambda-actions .button{font-size:12px;padding:9px}.lambda-actions .small-meta{font-size:11px}#lambda-speed-all{gap:6px}.lambda-grid{min-width:825px}}
 
-/* Figure 3 stays in one row; phones can scroll the matched videos together. */
+/* Figure 3 uses three video columns and an aggregate chart in the fourth. */
 .teacher-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:22px 0}
 .teacher-actions,#teacher-speed-all{display:flex;align-items:center;gap:12px}
 .teacher-scroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:8px}
 .teacher-scroll:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
-.teacher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-width:660px}
+.teacher-layout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-width:1040px;align-items:center}
+.teacher-grid{grid-column:span 3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-width:0}
 .teacher-cell{min-width:0;padding:14px 10px 10px;text-align:center;border-top:3px solid #e0e0f3}
 .teacher-cell[data-method=cd]{border-color:#f2dfcd}
 .teacher-cell.ours{border-color:#b2cbcb;background:#eeeeef;border-radius:0 0 5px 5px}
@@ -87,19 +88,11 @@
 #teacher-speed-all>.playback-speed{margin-top:0}
 #teacher-status{color:#9a2940;font-size:14px;margin:8px 0}
 #teacher-status:empty{display:none}
-.teacher-evidence{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1040px;margin:38px auto 0}
-.teacher-evidence h3{font-size:30px;line-height:1.25;margin:0 0 20px}
-.teacher-evidence p{font-size:17px;line-height:1.75}
-.teacher-evidence .eyebrow{font-size:12px}
-.teacher-evidence .muted{font-size:14px;color:var(--muted)}
-.teacher-evidence figure{width:100%;max-width:420px;margin:0 auto}
-.teacher-evidence img{display:block;width:100%;height:auto}
-.teacher-evidence figcaption{font:12px var(--mono);text-align:center;color:var(--muted);margin-top:10px}
-@media(max-width:800px){.teacher-evidence{gap:28px}.teacher-evidence h3{font-size:26px}.teacher-evidence p{font-size:16px}}
-@media(max-width:600px){.teacher-actions{width:100%;flex-wrap:wrap;gap:10px;justify-content:space-between}.teacher-actions .button{font-size:12px;padding:9px}.teacher-actions .small-meta{font-size:11px}#teacher-speed-all{gap:6px}.teacher-cell h4{font-size:16px}.teacher-evidence{grid-template-columns:1fr;gap:22px;margin-top:28px}.teacher-evidence figure{max-width:390px}}
 
-.teacher-keyframes{border-top:1px solid var(--line);padding:16px 0 22px}
-.teacher-keyframes summary{font:13px var(--mono);color:var(--muted)}
-.teacher-frames-scroll{overflow-x:auto;margin-top:18px;scrollbar-width:thin}
-.teacher-frames-scroll img{display:block;width:100%;min-width:820px;height:auto}
-.teacher-frames-scroll:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+.teacher-heading{max-width:1040px}
+.teacher-heading>.teacher-description{font-size:17px;color:var(--muted);line-height:1.7;margin:0}
+.teacher-heading>p.teacher-control-note{font-size:14px;color:var(--muted);margin:12px 0 0}
+.teacher-chart{min-width:0;margin:0}
+.teacher-chart img{display:block;width:100%;height:auto}
+.teacher-chart figcaption{font:11px/1.5 var(--mono);color:var(--muted);text-align:center;margin-top:8px}
+@media(max-width:600px){.teacher-actions{width:100%;flex-wrap:wrap;gap:10px;justify-content:space-between}.teacher-actions .button{font-size:12px;padding:9px}.teacher-actions .small-meta{font-size:11px}#teacher-speed-all{gap:6px}.teacher-cell h4{font-size:16px}.teacher-heading>.teacher-description{font-size:16px}}

@@ -39,9 +39,6 @@ mediaReady.then(data => {
     $('#teacher-prompt').textContent = experiment.prompt;
     seek.value = 0; time.textContent = '0:00'; status.textContent = '';
     $('#teacher-meta').textContent = `30 seconds · MovieGen prompt ${String(experiment.promptIndex).padStart(3, '0')} · seed 0`;
-    const frames = $('#teacher-frames');
-    frames.src = experiment.frames.src; frames.alt = experiment.frames.alt;
-    frames.width = experiment.frames.width; frames.height = experiment.frames.height;
     $('#teacher-panel').setAttribute('aria-labelledby', `teacher-tab-${experiment.id}`);
     tabs.querySelectorAll('[role=tab]').forEach(tab => {
       const selected = tab.dataset.example === id;
