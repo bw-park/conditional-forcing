@@ -18,7 +18,7 @@ GitHub Pages serves the root of the `main` branch. Changes pushed to `main` publ
 
 All application and media paths are relative so the site works under a project subdirectory. Video uses HLS with local fMP4 segments, native browser playback when available, and the bundled hls.js fallback. Muted videos autoplay while visible; the gallery loads 12 cards at a time. Each video offers 1×, 2×, and 5× playback. Selections persist while navigating the page. Comparison videos synchronize when all rates match; different rates advance and loop independently while the shared seek and play/pause controls remain available.
 
-The gallery contains 36 examples each for 30-second and 60-second rollouts. Matched comparisons include eight methods for six prompts. The training source code and manuscript are coming soon.
+The gallery contains 36 examples each for 30-second and 60-second rollouts. Matched comparisons include eight methods for six prompts. Rolling Forcing appears with a small “Causal-forcing init” note in each comparison. The training source code and manuscript are coming soon.
 
 ## Assets
 

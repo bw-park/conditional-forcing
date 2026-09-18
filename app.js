@@ -8,7 +8,7 @@ const videoStates = new WeakMap(), inlineSlots = new Set(), slotStates = new Wea
 const playbackRates = new Map();
 let comparisonVisible = false, comparisonManualPause = false;
 let hlsLoader;
-const mediaReady = fetch('data/media.json?v=11').then(response => {
+const mediaReady = fetch('data/media.json?v=12').then(response => {
   if (!response.ok) throw new Error('The video collection could not be loaded.');
   return response.json();
 }).then(data => {
@@ -317,6 +317,7 @@ function selectComparison(id) {
     const item = items.get(id);
     const cell = element('article', 'comparison-cell' + (id.startsWith('ours-') ? ' ours' : ''));
     const title = element('h4', '', id.startsWith('ours-') ? 'Ours' : item.method);
+    if (item.methodNote) title.append(element('small', 'comparison-method-note', item.methodNote));
     const stage = element('div', 'comparison-media'); stage.append(mediaButton(item, true));
     const rateKey = `comparison:${activeComparison.id}:${id}`;
     stage.dataset.rateKey = rateKey;
